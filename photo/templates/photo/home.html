@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for picture in pictures %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h2><a class="article-title" href="#">{{ picture.title }}</a></h2>
+              <small class="text-muted">{{ picture.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <div class = "media">
+              <img src="{{ picture.image.url}}"  
+            </div>
+            <p class="article-content">{{ picture.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

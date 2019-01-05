@@ -16,6 +16,6 @@ class Picture(models.Model):
 
 		img = Image.open(self.image.path)
 
-		output_size = (800, 400)
+		output_size = (1000, 500)
 		img.thumbnail(output_size, Image.ANTIALIAS)
 		img.save(self.image.path)

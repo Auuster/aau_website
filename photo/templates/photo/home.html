@@ -3,14 +3,13 @@
     {% for picture in pictures %}
         <article class="media content-section">
           <div class="media-body">
-            <div class="article-metadata">
-              <h2><a class="article-title" href="#">{{ picture.title }}</a></h2>
-              <small class="text-muted">{{ picture.date_posted|date:"F d, Y" }}</small>
+            <div style="position:relative;" class="article-metadata">
+              <h2 style="display:inline;">{{ picture.title }}</h2>
+              <small style="position: absolute; bottom:0; right:0" class="text-muted">{{ picture.content }}</small>
             </div>
             <div class = "media">
-              <img src="{{ picture.image.url}}"  
+              <img class = "image" src="{{ picture.image.url}}" alt="{{ picture.title }}">  
             </div>
-            <p class="article-content">{{ picture.content }}</p>
           </div>
         </article>
     {% endfor %}

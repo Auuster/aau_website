@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
 from .models import Picture
 
 def home(request):
@@ -8,3 +8,10 @@ def home(request):
 		'pictures': Picture.objects.all()
 	}
 	return render(request, 'photo/home.html', context)
+
+class PictureListView(ListView):
+	model = Picture
+	template_name = 'photo/home.html'
+	context_object_name = 'pictures'
+	ordering = ['title']
+	paginate_by = 5

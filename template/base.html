@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'photo/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'static/main.css' %}">
 
     {% if page %}
         <title>Aaron Au - {{ page }}</title>
@@ -38,7 +39,7 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-8" style="text-align:center;">
           {% block content %}{% endblock %}
         </div>
         <div class="col-md-2"></div>

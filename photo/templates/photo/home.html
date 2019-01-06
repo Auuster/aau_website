@@ -1,16 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
     {% for picture in pictures %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div style="position:relative;" class="article-metadata">
-              <h2 style="display:inline;">{{ picture.title }}</h2>
-              <small style="position: absolute; bottom:0; right:0" class="text-muted">{{ picture.content }}</small>
-            </div>
-            <div class = "media">
-              <img class = "image" src="{{ picture.image.url}}" alt="{{ picture.title }}">  
-            </div>
+      <article class="media content-section">
+        <div class="media-body">
+          <div style="position:relative; text-align:left;" class="article-metadata">
+            <h2 style="display:inline;">{{ picture.title }}</h2>
+            <small style="position: absolute; bottom:0; right:0" class="text-muted">{{ picture.content }}</small>
           </div>
-        </article>
+          <div class = "media">
+            <img class = "image" src="{{ picture.image.url}}" alt="{{ picture.title }}">  
+          </div>
+        </div>
+      </article>
     {% endfor %}
+    {% if is_paginated %}
+        {% if page_obj.has_previous%}
+          <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.number }}}">{{ page_obj.number }}</a>
+
+        {% if page_obj.has_next%}
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+    {% endif %}
 {% endblock content %}

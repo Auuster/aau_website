@@ -5,10 +5,10 @@
         <div class="media-body">
           <div style="position:relative; text-align:left;" class="article-metadata">
             <h2 style="display:inline;">{{ book.title }}</h2>
-            <small style="position: absolute; bottom:0; right:0" class="text-muted">{{ book.date_posted }}</small>
+            <small style="position: absolute; bottom:0; right:0" class="text-muted"> By: {{ book.writer }}</small>
           </div>
-          <div class = "media">
-            <p>{{ book.summary }}</p> 
+          <div class ="media" style="display:inline-block; text-align:justify;" >
+            <p>{{ book.summary|safe }}</p> 
           </div>
         </div>
       </article>

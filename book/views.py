@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Book
 
 def home(request):
@@ -14,4 +14,8 @@ class BookListView(ListView):
 	template_name = 'book/home.html'
 	context_object_name = 'books'
 	ordering = ['title']
-	paginate_by = 5
+	paginate_by = 10
+
+class BookDetailView(DetailView):
+	model = Book
+	template_name = 'book/detail.html'

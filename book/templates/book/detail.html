@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div style="position:relative; text-align:left;" class="article-metadata">
+        <h2 style="display:inline;">{{ object.title }}</h2>
+        <small style="position: absolute; bottom:0; right:0" class="text-muted"> By: {{ object.writer }}</small>
+      </div          <div class ="media" style="display:inline-block; text-align:justify;" >
+        <div style="text-align:justify;">{{ object.summary|safe }}</div> 
+      </div>
+    </div>
+  </article>
+{% endblock content %}

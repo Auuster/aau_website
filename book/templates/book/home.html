@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
     {% for book in books %}
+    <a href="{% url 'book-detail' book.id %}">
       <article class="media content-section">
         <div class="media-body">
           <div style="position:relative; text-align:left;" class="article-metadata">
             <h2 style="display:inline;">{{ book.title }}</h2>
             <small style="position: absolute; bottom:0; right:0" class="text-muted"> By: {{ book.writer }}</small>
           </div>
-          <div class ="media" style="display:inline-block; text-align:justify;" >
-            <p>{{ book.summary|safe }}</p> 
-          </div>
         </div>
       </article>
+    </a>
     {% endfor %}
 {% endblock content %}

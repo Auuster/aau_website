@@ -5,7 +5,7 @@ from .models import Book
 def home(request):
 	context = {
 		'page': 'Books',
-		'books': Book.objects.all()
+		'books': Book.objects.all(),
 	}
 	return render(request, 'book/home.html', context)
 
@@ -15,6 +15,13 @@ class BookListView(ListView):
 	context_object_name = 'books'
 	ordering = ['title']
 	paginate_by = 10
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['page'] = 'Books'
+		context['css'] = 'book/main.css'
+		return context
+
 
 class BookDetailView(DetailView):
 	model = Book

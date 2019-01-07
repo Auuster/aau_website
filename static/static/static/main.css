@@ -1,15 +1,6 @@
 .frame {
-  width: 440px;
-  padding: 20px;
-  background-color: black;
   margin: 15px auto;
-  border-radius: 20px;
-}
-
-.frame img {
   border-radius: 10px;
-  margin: 0;
-  padding: 0;
 }
 
 .text_bio {

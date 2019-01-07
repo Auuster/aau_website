@@ -14,8 +14,6 @@
 
 .text_bio {
   padding: 15px 50px;
-  background-color: #AAC37B;
-  border-radius: 15px;
   text-align: justify;
 }
  
@@ -26,7 +24,7 @@
 
 .row_buttons {
   margin: 20px 40px;
-  text-algin: center;
+  text-align: center;
 }
 
 .button {

@@ -5,9 +5,28 @@
       <div style="position:relative; text-align:left;" class="article-metadata">
         <h2 style="display:inline;">{{ object.title }}</h2>
         <small style="position: absolute; bottom:0; right:0" class="text-muted"> By: {{ object.writer }}</small>
-      </div          <div class ="media" style="display:inline-block; text-align:justify;" >
-        <div style="text-align:justify;">{{ object.summary|safe }}</div> 
       </div>
     </div>
   </article>
+  {% if reviews %}
+    {% for review in reviews %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="review">
+          <div class="article-metadata" >Review by: {{review.reviewer.user.username}} on {{review.date_posted}} with a rating of {{review.rating}}/8 </div>
+          <div style="text-align:justify;">{{ review.review|safe }}</div> 
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  {% else %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="review">
+          <div class="article-metadata" >Review by: noone on never with a rating of 8/8 </div>
+          <div style="text-align:justify;"><p>Opps looks like there is no reviews right now =(. We are probably trying to finish this book.</p></div> 
+        </div>
+      </div>
+    </article>
+  {% endif %}
 {% endblock content %}

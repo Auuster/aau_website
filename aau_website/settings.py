@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'photo.apps.PhotoConfig',
     'static.apps.StaticConfig',
     'book.apps.BookConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

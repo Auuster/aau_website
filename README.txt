@@ -1,7 +1,7 @@
 TODOS:
 
 PROFILE PAGE
+>create profile page
 
-BOOK - remove summary
-
-ADD REVIEW MODEL TO LINK PROFILE + BOOK + REVIEW (TEXTFIELD) + RATING (INT)
+Book Review
+> FORMATING/CSS

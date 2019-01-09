@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('static.urls')),
     path('photo/', include('photo.urls')),
     path('book/', include('book.urls')),
+    path('profile/', include('users.urls')),
 ]
 
 if settings.DEBUG:

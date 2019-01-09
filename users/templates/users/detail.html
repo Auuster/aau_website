@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div style="position:relative; text-align:left;" class="article-metadata">
+        <h2 style="display:inline;">{{ user.username }}</h2>
+        <img class ="image" src="{{ object.image.url}}" alt="{{ user.username }}"> 
+        <p>{{ object.intro }}</p>
+      </div>
+    </div>
+  </article>
+{% endblock content %}

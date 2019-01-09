@@ -1,7 +1,7 @@
 TODOS:
 
 PROFILE PAGE
->create profile page
+> FORMATTING/CSS
 
 Book Review
 > FORMATING/CSS

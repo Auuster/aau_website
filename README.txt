@@ -4,4 +4,6 @@ PROFILE PAGE
 > FORMATTING/CSS
 
 Book Review
-> FORMATING/CSS
+> stars for review?
+> date format
+> review text format

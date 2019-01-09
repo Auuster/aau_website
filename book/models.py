@@ -20,6 +20,7 @@ class Book(models.Model):
 		('Dy', 'Dystopia'),
 	)
 	genre = models.CharField(max_length=3, choices=GENRES, default='SF')
+	image = models.ImageField(default='default_book.png', upload_to='books')
 
 	def __str__(self):
 		return self.title

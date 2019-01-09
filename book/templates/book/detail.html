@@ -2,20 +2,19 @@
 {% block content %}
   <article class="media content-section">
     <div class="media-body">
-      <div style="position:relative; text-align:left;" class="article-metadata">
-        <h2 style="display:inline;">{{ object.title }}</h2>
+      <div style="position:relative;" class="article-metadata">
+        <h2>{{ object.title }}</h2>
         <small style="position: absolute; bottom:0; right:0" class="text-muted"> By: {{ object.writer }}</small>
       </div>
+      <img class = "image" src="{{ object.image.url}}" alt="{{ object.title }}">  
     </div>
   </article>
   {% if reviews %}
     {% for review in reviews %}
     <article class="media content-section">
       <div class="media-body">
-        <div class="review">
-          <div class="article-metadata" >Review by: {{review.reviewer.user.username}} on {{review.date_posted}} with a rating of {{review.rating}}/8 </div>
-          <div style="text-align:justify;">{{ review.review|safe }}</div> 
-        </div>
+        <div class="article-metadata" >Review by: <a href="{% url 'profile-detail' review.reviewer.id %}"><strong>{{review.reviewer.user.username}}</strong></a> on {{review.date_posted}} with a rating of {{review.rating}}/8 </div>
+        <div class="review">{{ review.review|safe }}</div> 
       </div>
     </article>
     {% endfor %}

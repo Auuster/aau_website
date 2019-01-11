@@ -30,16 +30,17 @@
   text-align: center;
   vertical-align: middle;
   
-  color: #428646 !important;
+  color: #F7C331 !important;
   font-weight: bold;
   font-size: 28px;
 }
 
 .button p {
-  display: inline-block;
+  display: block;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: rgba(0,0,0,0.5);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .spacer {

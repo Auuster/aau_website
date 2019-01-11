@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+  {% load static %}
+  {% get_media_prefix as MEDIA_URL %}
   <article class="media content-section">
     <div class="media-body">
       <div style="position:relative;" class="article-metadata">
@@ -13,7 +15,10 @@
     {% for review in reviews %}
     <article class="media content-section">
       <div class="media-body">
-        <div class="article-metadata" >Review by: <a href="{% url 'profile-detail' review.reviewer.id %}"><strong>{{review.reviewer.user.username}}</strong></a> on {{review.date_posted}} with a rating of {{review.rating}}/8 </div>
+        <div class="article-metadata" style="position:relative;" >
+          Review by: <a href="{% url 'profile-detail' review.reviewer.id %}"><strong>{{review.reviewer.user.username}}</strong></a> 
+          <img style="position: absolute; right:0; width:30%;" src="{{ MEDIA_URL }}reviews/{{review.rating}}.png" alt="{{review.rating}}/8">
+        </div>
         <div class="review">{{ review.review|safe }}</div> 
       </div>
     </article>
@@ -21,9 +26,11 @@
   {% else %}
     <article class="media content-section">
       <div class="media-body">
-        <div class="review">
-          <div class="article-metadata" >Review by: noone on never with a rating of 8/8 </div>
-          <div style="text-align:justify;"><p>Opps looks like there is no reviews right now =(. We are probably trying to finish this book.</p></div> 
+          <div class="article-metadata" style="position:relative;">
+            Review by: <strong>Noone</strong>
+            <img style="position: absolute; right:0; width:30%;" src="{{ MEDIA_URL }}reviews/8.png" alt="8/8">
+          </div>
+          <div class="review" style="text-align:justify;">Looks like there is currently no reviews for this book. Allow me to get it started: The book is like this website, perfect but incomplete...</div> 
         </div>
       </div>
     </article>

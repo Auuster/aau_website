@@ -7,7 +7,20 @@
 
 a {
 	text-decoration: none;	
-	color: #000000;
+	color: #6B7A8F;
+}
+
+.detail {
+	background-color: #ffffff;
+}
+
+.detail :hover {
+	background-color: #DCC7AA;
+	text-decoration: none;
+}
+
+.article-metadata h2:hover {
+	text-decoration: none;
 }
 
 .review {

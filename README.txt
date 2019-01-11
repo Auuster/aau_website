@@ -1,9 +1,7 @@
 TODOS:
 
 PROFILE PAGE
-> FORMATTING/CSS
+> review text format underclass "intro" h1, h2, p
 
 Book Review
-> stars for review?
-> date format
-> review text format
+> review text format underclass "review"

@@ -4,9 +4,9 @@
     <div class="media-body">
       <div style="position:relative; text-align:left;" class="article-metadata">
         <h2 style="display:inline;">{{ user.username }}</h2>
-        <img class ="image" src="{{ object.image.url}}" alt="{{ user.username }}"> 
-        <p>{{ object.intro }}</p>
       </div>
+      <div class="profile-pic"><img class ="image" src="{{ object.image.url}}" alt="{{ user.username }}"> </div>
+      <div class="intro">{{ object.intro|safe }}</div>
     </div>
   </article>
 {% endblock content %}

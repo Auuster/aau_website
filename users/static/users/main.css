@@ -1,7 +1,18 @@
+
+.profile_pic {
+
+}
+
 .image {
-  max-width:90%;
-  max-height:90%;
+  width:50%;
+  overflow: hidden;
+  border-radius: 50%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
+}
+
+.intro {
+	text-align: justify;
+	max-width: 90%;
+	margin: 25px auto;
 }

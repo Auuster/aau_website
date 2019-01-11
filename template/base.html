@@ -1,4 +1,5 @@
 {% load static %}
+{% get_media_prefix as MEDIA_URL %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,8 @@
     {% else %}
         <title>Aaron Au</title>
     {% endif %}
+
+    <link rel="shortcut icon" type="image/png" href="{{MEDIA_URL}}favicon.ico">
 </head>
 <body>
     <header class="site-header">

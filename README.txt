@@ -1,7 +1,7 @@
 TODOS:
 
-PROFILE PAGE
-> review text format underclass "intro" h1, h2, p
+Drawings for books
 
-Book Review
-> review text format underclass "review"
+Reviewer info + picture
+
+review for Sapiens + three bodies + the dark forest + deaths end

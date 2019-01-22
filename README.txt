@@ -1,7 +1,8 @@
 TODOS:
 
-Drawings for books
+Fix admin issue.
 
-Reviewer info + picture
+Add photos
 
-review for Sapiens + three bodies + the dark forest + deaths end
+Mobile vs desktop versons
+

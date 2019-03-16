@@ -13,8 +13,8 @@ class BookListView(ListView):
 	model = Book
 	template_name = 'book/home.html'
 	context_object_name = 'books'
-	ordering = ['title']
-	#4paginate_by = 10
+	#ordering = ['title']
+	#paginate_by = 10
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)

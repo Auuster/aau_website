@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for recipe in object_list %}
+  <div class="detail">
+    <a href="{% url 'recipe-detail' recipe.slug %}">
+      <article class="media content-section">
+        <div class="media-body">
+          <div style="position:relative; text-align:left;" class="article-metadata">
+            <h2 style="display:inline-block;">{{ recipe.title }}</h2>
+            <small style="position: absolute; bottom:0; right:0" class="text-muted">{{ recipe.category }}</small>
+          </div>
+        </div>
+      </article>
+    </a>
+  </div>
+  {% endfor %}
+{% endblock %}

@@ -6,6 +6,7 @@
 	<div class="row recipe_top">
 	  <div class="col-md-12 col-md-offset-1 text-center">
 		<h2>{{ recipe.title }}</h2>
+		<p>By: {{ recipe.creater }}
 		<p>{{ recipe.summary }}</p>
 		{% if recipe.get_serving %}<p>{{ recipe.get_serving }}</p>{% endif %}
 		{% if recipe.prep_time %}

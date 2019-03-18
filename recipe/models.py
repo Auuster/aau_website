@@ -2,6 +2,7 @@ import datetime
 import math
 
 from django.db import models
+from users.models import Profile
 from django.utils.translation import ugettext_lazy as _
 from model_utils import Choices
 from pint import UnitRegistry
@@ -317,6 +318,8 @@ class Recipe(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     serving_string = models.ForeignKey(ServingString, null=True, blank=True, on_delete=models.SET_NULL)
     serving_value = models.IntegerField(null=True, blank=True)
+
+    creater = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

@@ -1,0 +1,54 @@
+.frame {
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+.text_bio {
+  padding: 15px 50px;
+  text-align: justify;
+}
+ 
+.text_bio a {
+  text-decoration: none;
+  color: black;
+}
+
+.row_buttons {
+  margin: 20px 40px;
+  text-align: center;
+}
+
+.button {
+  width: 45%;
+  height: 100px;
+  display:inline-block;
+  background:green;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-size: cover;
+  
+  text-align: center;
+  vertical-align: middle;
+  
+  color: #F7C331 !important;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.button p {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.spacer {
+  display:inline-block;
+  width:8%;
+  margin:0; 
+}
+
+.achievements {
+  margin-bottom: 20px; 
+}
